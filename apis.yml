@@ -1,7 +1,12 @@
 aid: becton-dickinson
-url: https://raw.githubusercontent.com/api-evangelist/becton-dickinson/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/becton-dickinson/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.becton-dickinson.com
+description: >-
+  Becton Dickinson is a global medical technology company that develops, manufactures,
+  and sells medical devices, instrument systems, and reagents used by healthcare institutions,
+  life science researchers, and clinical laboratories.
