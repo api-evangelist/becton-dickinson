@@ -8,137 +8,99 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Becton Dickinson
 providerId: becton-dickinson
-publisherName: Becton Dickinson
-serviceCategory: API
+publisherName: Becton, Dickinson and Company
+serviceCategory: Healthcare / Medical Device Connectivity
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Healthcare
   - Medical Devices
-  - Infusion Therapy
   - Medication Management
-  - Connected Health
-  - Diagnostics
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Becton Dickinson API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+description: 'FOCUS-aligned FinOps shape for BD Incada and BD Pyxis: hospital-services agreement billed
+  per platform license + connected-device scope, with API access bundled. Public rate-card data is not
+  available.'
+notes: No public rate card. Replace meter values with the customer-negotiated BD agreement once available.
+sources:
+  - https://www.bd.com/en-us/
 principles:
   - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
+    description: Use BD Incada's natural-language analytics and Pyxis reporting to attribute medication
+      use, infusion volume, and inventory by hospital unit.
   - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
+    description: Allocate platform cost across nursing units (ICU, peri-op, oncology) and pharmacy by
+      connected-device count and medication-event volume.
   - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
+    description: Right-size connected-device scope each renewal; consolidate Pyxis station footprint where
+      utilization is low. Use AI inventory analytics to reduce stockouts and waste.
   - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+    description: Joint biomed / pharmacy ownership of the BD engagement; review uptime, integration changes,
+      and medication-safety metrics quarterly.
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Hospital Services Agreement
+  billingFrequency: Annual
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
     - Tax
-    - Credit
     - Adjustment
   chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Becton Dickinson
-  ServiceCategory: Developer Tools / API
+  ServiceName: BD Connected Care
+  ServiceCategory: Healthcare / Medical Device Connectivity
   ProviderName: Becton Dickinson
-  PublisherName: Becton Dickinson
-  InvoiceIssuerName: Becton Dickinson
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Becton, Dickinson and Company
+  InvoiceIssuerName: Becton, Dickinson and Company
+  PricingCategory: Hospital Services Agreement
+  PricingUnit: device
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: connected_devices
+    description: BD devices integrated through Incada / Pyxis
+    unit: device
+    aggregation: max
+    dimensions:
+      - device_class
+      - hospital_unit
+  - name: pyxis_stations
+    description: BD Pyxis automated dispensing stations under management
+    unit: station
+    aggregation: max
+    dimensions:
+      - hospital_unit
+  - name: medication_events
+    description: Medication dispense / administration events tracked through Pyxis / Incada
+    unit: event
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - hospital_unit
+      - medication_class
+  - name: ai_analytics_seats
+    description: AI-analytics seats / use-case licenses
+    unit: seat
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
+      - module
+      - hospital_unit
 apis:
   - name: BD Incada Connected Care Platform
     baseURL: ''
-    tags:
-      - Healthcare
-      - Connected Devices
-      - AI
-      - Medication Management
-      - EMR Integration
     serviceName: BD Incada Connected Care Platform
     serviceCategory: API
   - name: BD Pyxis Medication Management System
     baseURL: ''
-    tags:
-      - Healthcare
-      - Medication Management
-      - Pharmacy
-      - Hospital Automation
     serviceName: BD Pyxis Medication Management System
     serviceCategory: API
 unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+  - name: Cost per Connected Device
+    metric: platform_cost / connected_devices
+    target: align to per-device clinical / inventory savings
+  - name: Cost per Pyxis Station
+    metric: pyxis_cost / pyxis_stations
+    target: align to medication-safety + waste-reduction targets
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
