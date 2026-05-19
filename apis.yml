@@ -62,6 +62,8 @@ apis:
         url: https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/becton-dickinson-and-company
   - type: Website
     url: https://www.bd.com/
   - type: Security
