@@ -49,6 +49,12 @@ apis:
     tags:
       - Healthcare
       - Connected Devices
+      - Artificial Intelligence
+      - Medication Management
+      - EMR Integration
+    tags_raw:
+      - Healthcare
+      - Connected Devices
       - AI
       - Medication Management
       - EMR Integration
