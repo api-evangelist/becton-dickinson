@@ -10,6 +10,17 @@ description: >-
   patient monitors, and pharmacy robotics. BD also produces the Pyxis medication management
   system and integrates with EMRs via HL7 FHIR standards for clinical data exchange.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
