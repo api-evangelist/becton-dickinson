@@ -1,0 +1,84 @@
+generated: '2026-09-04'
+method: searched
+source: https://www.bd.com/en-us/about-bd/cybersecurity
+description: >-
+  Standards and compliance posture asserted by Becton Dickinson on its own public surface,
+  cross-checked against the `health` regulatory regime shortlist in scoring.yml (fhir,
+  smart-on-fhir, us-core, uscdi, da-vinci, carin-blue-button, fhir-bulk-data, cds-hooks,
+  c-cda, hl7-v2, dicom). BD publishes NO machine-readable API contract of any kind — no
+  OpenAPI, no GraphQL SDL, no AsyncAPI, no WSDL, no .proto, no FHIR CapabilityStatement —
+  so every interface-level conformance below is recorded as a documented product CLAIM and
+  not as a verified contract signature. The security/compliance certifications, by contrast,
+  are verified: BD publishes downloadable ISO/IEC 27001:2022 and UL 2900-2-1 certificates.
+  NOTHING here is inferred from a spec, because there is no spec to infer from.
+conformance:
+  - id: iso-27001
+    name: ISO/IEC 27001:2022
+    conforms: true
+    verified: true
+    evidence: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd_certificate/bdx-bd-anz-iso-27001-primary-certificate-2025.pdf
+    note: Downloadable certificates for BD Enterprise/Australia, BD Germany and BD Israel.
+  - id: soc2
+    name: SOC 2+ (Security, and Availability for cloud-based products)
+    conforms: true
+    verified: false
+    evidence: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+    note: Annual audit asserted on the Trust Center; report is request-only, so the assertion is not independently readable.
+  - id: ul-2900-2-1
+    name: UL 2900-2-1 / UL Cybersecurity Assurance Program (CAP)
+    conforms: true
+    verified: true
+    evidence: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd-synapsys/BD-Synapsys_v611_UL-2900-2-1_Certificate.pdf
+    note: Product-scoped (BD Synapsys v6.11), not enterprise-wide.
+  - id: mds2
+    name: MDS2 — Manufacturer Disclosure Statement for Medical Device Security
+    conforms: true
+    verified: false
+    evidence: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+    note: Delivered inside per-product Product Security White Papers, which are request-only and restricted to existing customers.
+  - id: cve-cna
+    name: CVE Numbering Authority (CVE Program)
+    conforms: true
+    verified: false
+    evidence: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=4
+    note: BD states it is authorized as a CNA and assigns CVE IDs for its own products.
+  - id: hl7-v2
+    name: HL7 v2 messaging
+    conforms: false
+    claimed: true
+    verified: false
+    evidence: https://www.bd.com/en-us/about-bd/cybersecurity
+    note: >-
+      BD markets bi-directional EMR interoperability for BD Alaris and BD Pyxis and teaches
+      HL7 interpretation in the customer-only BD Learning Academy (academy.bd.com), but
+      publishes no interface specification, message profile or conformance statement on a
+      public URL. Recorded as claimed-not-conformant rather than conformant: no artifact
+      was readable.
+  - id: fhir
+    name: HL7 FHIR
+    conforms: false
+    claimed: true
+    verified: false
+    evidence: https://www.bd.com/en-us/dc/corporate/2025/bd-incada-platform
+    note: >-
+      FHIR-based EMR integration is described in BD Incada launch material and third-party
+      coverage, but BD publishes no FHIR CapabilityStatement, ImplementationGuide or base
+      URL. Domain-standard conformance is REWARD-ONLY and is deliberately NOT asserted here.
+  - id: oauth2
+    conforms: false
+    verified: false
+    evidence: 'no published contract or auth documentation found on any BD host'
+  - id: rfc9457
+    conforms: false
+    verified: false
+    evidence: 'no published contract found'
+domain_standard:
+  market: Healthcare / connected medical devices
+  shortlist_probed: [fhir, smart-on-fhir, us-core, uscdi, da-vinci, carin-blue-button, fhir-bulk-data, cds-hooks, c-cda, hl7-v2, dicom]
+  declared_in_contract: false
+  note: >-
+    No contract exists to carry a domain-standard signature. HL7 v2 and FHIR are product
+    claims only. Not scored, not fabricated.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

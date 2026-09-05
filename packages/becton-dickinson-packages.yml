@@ -1,0 +1,33 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  registry.npmjs.org search API, pypi.org/pypi/<pkg>/json, plus BD's own product, support
+  and Knowledge Center pages
+description: >-
+  No first-party Becton Dickinson client library, SDK or CLI was found in any public package
+  registry. npm registry search for "becton-dickinson", "bd-pyxis", "bd-incada",
+  "bdbiosciences" and "flowjo" returns only unrelated third-party packages; PyPI returns 404
+  for flowjo, bdbiosciences and becton. BD publishes no GitHub organization and no developer
+  portal, and its device-integration work is delivered as HL7 interface engineering by BD
+  services teams rather than as a downloadable SDK. This is a recorded ABSENCE, not a gap in
+  the search — no `SDKs` pointer is emitted from this file.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_searched:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search
+    queries: [becton-dickinson, bd-pyxis, bd-incada, bdbiosciences, flowjo]
+    first_party_hits: 0
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/<name>/json
+    queries: [flowjo, bdbiosciences, becton]
+    first_party_hits: 0
+    note: all three returned HTTP 404
+  - registry: github
+    endpoint: web search for a Becton Dickinson GitHub organization
+    first_party_hits: 0
+    note: No BD-owned GitHub organization found; only individual employee accounts.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -44,7 +44,7 @@ tags:
   - Fortune 500
 access: 3rd-Party
 created: '2026-03-21'
-modified: '2026-04-19'
+modified: '2026-09-04'
 position: Consuming
 specificationVersion: '0.23'
 apis:
@@ -71,7 +71,7 @@ apis:
       - EMR Integration
     properties:
       - type: Documentation
-        url: https://www.bd.com/en-us/
+        url: https://www.bd.com/en-us/dc/corporate/2025/bd-incada-platform
 
   - aid: becton-dickinson:pyxis
     name: BD Pyxis Medication Management System
@@ -81,7 +81,7 @@ apis:
       connects to hospital information systems and EMRs for medication ordering, dispensing,
       and reconciliation workflows. The BD Incada platform extends Pyxis with cloud-based
       analytics and AI capabilities.
-    humanURL: https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis
+    humanURL: https://www.bd.com/en-us/products-and-solutions/products/product-brands/pyxis
     tags:
       - Healthcare
       - Medication Management
@@ -89,7 +89,7 @@ apis:
       - Hospital Automation
     properties:
       - type: Documentation
-        url: https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis
+        url: https://www.bd.com/en-us/products-and-solutions/products/product-brands/pyxis
 
 common:
   - type: DomainSecurity
@@ -99,11 +99,27 @@ common:
   - type: Website
     url: https://www.bd.com/
   - type: Security
-    url: https://www.bd.com/en-us/company/cybersecurity
+    url: https://www.bd.com/en-us/about-bd/cybersecurity
   - type: PrivacyPolicy
-    url: https://www.bd.com/en-us/company/legal-notices-and-privacy/privacy
+    url: https://www.bd.com/en-us/about-bd/policies/privacy-policy-statement
   - type: TermsOfService
-    url: https://www.bd.com/en-us/company/legal-notices-and-privacy
+    url: https://www.bd.com/en-us/about-bd/policies/terms-of-use
+  - type: LLMsTxt
+    url: llms/becton-dickinson-llms.txt
+  - type: VulnerabilityDisclosure
+    url: security/becton-dickinson-vulnerability-disclosure.yml
+  - type: TrustCenter
+    url: security/becton-dickinson-trust-center.yml
+  - type: Compliance
+    url: security/becton-dickinson-trust-center.yml
+  - type: Conformance
+    url: conformance/becton-dickinson-conformance.yml
+  - type: Packages
+    url: packages/becton-dickinson-packages.yml
+  - type: Support
+    url: https://www.bd.com/en-us/support/contact-us
+  - type: Blog
+    url: https://news.bd.com/press-releases
   - type: Features
     data:
       - name: BD Incada Connected Care Platform
@@ -143,3 +159,8 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-04'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v3

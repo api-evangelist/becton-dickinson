@@ -1,0 +1,64 @@
+generated: '2026-09-04'
+method: searched
+probe: false
+source: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+url: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+description: >-
+  The BD Cybersecurity Trust Center (also reachable at the vanity host
+  cybersecurity.bd.com, which 302s to www.bd.com/en-us/about-bd/cybersecurity) publishes
+  BD's certifications and attestations tab. ISO/IEC 27001:2022 certificates are downloadable
+  PDFs; SOC 2+ reports and product security white papers (which carry the MDS2 attestation)
+  are request-only behind a form; UL CAP (UL 2900-2-1) certificates are downloadable for the
+  products that carry them. The automated trust-center probe records nothing for BD because
+  there is no trust.<domain> subdomain and the Akamai edge answers 403 to non-browser agents
+  — this is the searched, human-verified fill.
+trust_center:
+  url: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+  vanity_host: https://cybersecurity.bd.com/trust-center
+  self_serve: partial
+  note: >-
+    ISO 27001 and UL CAP certificates download directly; SOC 2+ and product security white
+    papers require completing a request form and are restricted to existing customers.
+certifications:
+  - name: ISO/IEC 27001:2022
+    scope: BD Enterprise and BD Australia
+    availability: public download
+    url: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd_certificate/bdx-bd-anz-iso-27001-primary-certificate-2025.pdf
+  - name: ISO/IEC 27001:2022
+    scope: Becton Dickinson GmbH (Germany)
+    availability: public download
+    url: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd_certificate/31613334-becton-dickinson-gmbh-certificate-englisch-isms22.pdf
+  - name: ISO/IEC 27001:2022
+    scope: BD Israel
+    availability: public download
+    url: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd_certificate/ISO270012022_ENG_07042028.pdf
+  - name: SOC 2+
+    scope: >-
+      Annual audits addressing the Trust Services Criteria for Security and, for cloud-based
+      products, Availability. Multiple BD products in scope.
+    availability: on request (form)
+    cadence: annual
+  - name: UL CAP / UL 2900-2-1
+    scope: BD Synapsys (v6.11)
+    availability: public download
+    url: https://www.bd.com/content/dam/bd-assets/bd-com/en-us/document/cybersecurity/bd-synapsys/BD-Synapsys_v611_UL-2900-2-1_Certificate.pdf
+  - name: MDS2 (Manufacturer Disclosure Statement for Medical Device Security)
+    scope: Delivered inside the per-product Product Security White Papers
+    availability: on request (form)
+report_access:
+  soc_reports: SOC 2+ reports provided on request via a form; scope limited to existing customers.
+  white_papers: Product security white papers (incl. MDS2 attestation) request-only.
+  certificates: ISO/IEC 27001:2022 and UL CAP certificates download without a form.
+docs:
+  - https://www.bd.com/en-us/about-bd/cybersecurity
+  - https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+  - https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=3
+  - https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=4
+evidence:
+  - source: https://www.bd.com/en-us/about-bd/cybersecurity?active-tab=2
+    http_status: 200
+    fetched: '2026-09-04'
+    keywords: [ISO/IEC 27001:2022, SOC 2+, UL CAP, MDS2, product security white papers]
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

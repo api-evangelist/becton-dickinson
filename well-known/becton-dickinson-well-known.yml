@@ -1,0 +1,114 @@
+generated: '2026-09-04'
+method: probed
+source: live probes of every host this record knows (registrable domain + www, the
+  docs/product host, the trust-center host, the customer-training host, the newsroom host)
+description: >-
+  Results of probing the /.well-known/ discovery surface for every Becton Dickinson host
+  this record knows. BD publishes no API baseURL and no OpenAPI servers[] host, so the
+  probe set is the registrable domain (bd.com), www.bd.com (the product + docs host),
+  cybersecurity.bd.com (the Cybersecurity Trust Center vanity host, which 302s to
+  www.bd.com/en-us/about-bd/cybersecurity), academy.bd.com (BD Learning Academy) and
+  news.bd.com (the BD newsroom). NO /.well-known/ document was served on any host:
+  www.bd.com and academy.bd.com answer 404 (HTML error page) for security.txt, and the
+  Akamai edge answers 403 Access Denied for the dot-suffixed /.well-known/*.json paths
+  regardless of user agent. The 404s on /.well-known/api-catalog and
+  /.well-known/agent-card.json were re-confirmed through a browser-class fetch that the
+  edge does serve, so those two are recorded as genuine 404s rather than edge denials.
+  NO WellKnown or SecurityTxt pointer is emitted from this file — it records an absence.
+  NOTE the same edge serves https://www.bd.com/llms.txt (200, text/plain) to a browser
+  user agent while returning 403 Access Denied to ClaudeBot/1.0 and GPTBot/1.0 for that
+  same path; see llms/becton-dickinson-llms.txt.
+hosts:
+  - host: www.bd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        note: HTML 404 error page, not a document.
+      - path: /.well-known/openid-configuration
+        status: 403
+        note: Akamai edge Access Denied (reference #18.*.edgesuite.net) — not a document.
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        note: Akamai edge Access Denied — not a document.
+      - path: /.well-known/api-catalog
+        status: 404
+        note: Confirmed 404 on a browser-class fetch the edge serves.
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        note: Akamai edge Access Denied — not a document.
+      - path: /.well-known/agent-card.json
+        status: 404
+        note: Confirmed 404 on a browser-class fetch the edge serves. No A2A agent card.
+      - path: /.well-known/agent.json
+        status: 403
+        note: Akamai edge Access Denied — no legacy agent card observed.
+  - host: bd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+        note: 301 to www.bd.com; apex serves no documents of its own.
+      - path: /.well-known/openid-configuration
+        status: 301
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+      - path: /.well-known/api-catalog
+        status: 301
+      - path: /.well-known/ai-plugin.json
+        status: 301
+      - path: /.well-known/agent-card.json
+        status: 301
+      - path: /.well-known/agent.json
+        status: 301
+  - host: cybersecurity.bd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+        note: Vanity host; every path 302s to https://www.bd.com/en-us/about-bd/cybersecurity.
+      - path: /.well-known/openid-configuration
+        status: 302
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+      - path: /.well-known/api-catalog
+        status: 302
+      - path: /.well-known/ai-plugin.json
+        status: 302
+      - path: /.well-known/agent-card.json
+        status: 302
+      - path: /.well-known/agent.json
+        status: 302
+  - host: academy.bd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+  - host: news.bd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+documents_found: 0
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
