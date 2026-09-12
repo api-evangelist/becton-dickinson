@@ -1,0 +1,11 @@
+{
+  "repo": "becton-dickinson",
+  "feeds": [
+    {
+      "source": "https://www.bd.com/en-us/support/contact-us",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-06T19:17:18Z"
+}
