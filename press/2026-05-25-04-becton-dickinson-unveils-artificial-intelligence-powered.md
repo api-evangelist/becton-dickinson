@@ -1,7 +1,9 @@
 ---
 title: Becton Dickinson Unveils Artificial Intelligence Powered ...
 url: https://www.2minutemedicine.com/becton-dickinson-unveils-artificial-intelligence-powered-monitor-for-surgery/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Becton Dickinson" press release artificial intelligence'
 position: 4
 source: serpapi-google

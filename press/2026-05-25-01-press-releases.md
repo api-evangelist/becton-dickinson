@@ -1,7 +1,9 @@
 ---
 title: Press releases
 url: https://news.bd.com/press-releases?l=100&o=100
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Becton Dickinson" press release artificial intelligence'
 position: 1
 source: serpapi-google
