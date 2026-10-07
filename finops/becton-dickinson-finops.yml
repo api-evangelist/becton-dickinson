@@ -100,10 +100,8 @@ apis:
 unitEconomics:
   - name: Cost per Connected Device
     metric: platform_cost / connected_devices
-    target: align to per-device clinical / inventory savings
   - name: Cost per Pyxis Station
     metric: pyxis_cost / pyxis_stations
-    target: align to medication-safety + waste-reduction targets
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
