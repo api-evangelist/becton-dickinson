@@ -51,6 +51,257 @@ edges:
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   detected_by: sweep-medical-imaging-ihe.py
   first_seen: '2026-10-20'
+- partner_name: FDA 510(k) premarket notifications (IVD / surgical panels)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K262163
+  category: FDA-cleared IVD / surgical device
+  contract_reference:
+    register: openFDA device/510k (decision_date >= 2016-01-01; panels CH HE IM MI PA TX SU OR)
+    standard: FDA 510(k) premarket clearance (IVD / surgical panels)
+    spec_file: null
+    role: fda-510k-holder
+    registered_name: Becton Dickinson
+    matched_domain: bd.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: K262163
+    certified_products:
+    - product: FDA 510(k) clearance, Clinical Chemistry panel
+      product_type: Clinical Chemistry
+      review_panel: CH
+      lapsed: false
+      latest_decision: '2026-04-15'
+      devices_sample:
+      - BD MiniDraw Capillary Blood Collection System with BD MiniDraw H&H Capillary Blood Collection Tube
+      - "BD MiniDraw\x99 Capillary Blood Collection System with BD MiniDraw\x99 SST\x99 Capillary Blood Collection\
+        \ Tube"
+      - BD Preset Syringe & BD A-Line Syringe
+      - "BD Preset\x99 and BD A-Line\x99 Arterial Blood Collection Syringes"
+      - BD Vacutainer Barricor Lithium Heparin Plasma Blood Collection Tube
+    - product: FDA 510(k) clearance, Hematology panel
+      product_type: Hematology
+      review_panel: HE
+      lapsed: false
+      latest_decision: '2020-09-28'
+      devices_sample:
+      - BD FACSLyric Flow Cytometer (3-1, 4-2, 4-2-2 and 4-3-3 optical configurations), BD FACSuite Clinical Software,
+        BD Multitest 6-Color Assays, BD Multitest 4-Color Assays, BD Multitest 6-Color TBNK
+      - BD FACSLyric Flow Cytometer (3-1, 4-2, 4-2-2, 4-3-3 and 4-3-5 optical configurations), BD FACSDuet Sample
+        Preparation System, BD FACS Universal Loader, BD FACSuite Clinical software, BD Multitest 6-Color Assay
+        Modules, BD Multitest 4-Color Assay Modules, BD FACSFlow Sheath Fluid, BD CS&T Beads, BD FC Beads 7-Color
+        Kit
+    - product: FDA 510(k) clearance, Immunology panel
+      product_type: Immunology
+      review_panel: IM
+      lapsed: false
+      latest_decision: '2019-01-08'
+      devices_sample:
+      - BD MAX CT/GC/TV, BD MAX INSTRUMENT
+      - BD MAX CTGCTV2, BD MAX System
+    - product: FDA 510(k) clearance, Microbiology panel
+      product_type: Microbiology
+      review_panel: MI
+      lapsed: false
+      latest_decision: '2026-09-14'
+      devices_sample:
+      - BD BACTEC Peds Plus/F Culture Vials (plastic)
+      - BD BACTEC Peds Plus/F Culture Vials Soybean-Casein Digest Broth with Resins in a Plastic Vial
+      - BD BACTEC Standard Anaerobic/F Culture Vials Soybean-Casein Digest Broth in a Plastic Vial
+      - BD BACTEC Standard/10 Aerobic/F Culture Vials Soybean-Casein Digest Broth in a Plastic Vial
+      - "BD BACTEC\x99 Myco/F Lytic Culture Vials"
+    - product: FDA 510(k) clearance, General & Plastic Surgery panel
+      product_type: General & Plastic Surgery
+      review_panel: SU
+      lapsed: false
+      latest_decision: '2022-12-16'
+      devices_sample:
+      - "BD Microtainer® Contact-Activated Lancets; BD Microtainer® Quikheel\x99 Lancets"
+    signal_note: certified_products = one entry per FDA review PANEL held, never per device; openFDA carries decisions,
+      not withdrawals, so lapsed is always false
+    identity: wikidata Q813780 'Becton Dickinson' P856 http://www.bd.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    other_registrations:
+    - Becton, Dickinson and Company
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA premarket approval (IVD / surgical panels)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P160037
+  category: FDA PMA-approved IVD / surgical device
+  contract_reference:
+    register: openFDA device/pma (decision_date >= 2016-01-01; panels CH HE IM MI PA TX SU OR)
+    standard: FDA premarket approval (IVD / surgical panels)
+    spec_file: null
+    role: fda-pma-holder
+    registered_name: Becton, Dickinson and Company
+    matched_domain: bd.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: P160037
+    certified_products:
+    - product: FDA PMA approval, Microbiology panel
+      product_type: Microbiology
+      review_panel: MI
+      lapsed: false
+      latest_decision: '2026-08-19'
+      devices_sample:
+      - "BD FOX\x99 PCR Extraction Tubes; BD Onclarity\x99 HPV Assay"
+      - BD ONCLARITY HPV ASSAY
+      - BD Onclarity HPV
+      - BD Onclarity HPV Assay
+      - "BD Onclarity HPV Assay Reagent Pack (SKU 444075) and BD COR\x99 HPV Extraction Trough (SKU 444074)"
+    signal_note: certified_products = one entry per FDA review PANEL with a PMA decision (original or supplement),
+      never per device; lapsed always false (decisions, not withdrawals)
+    identity: wikidata Q813780 'Becton Dickinson' P856 http://www.bd.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA establishment registration and device listing (IVD / surgical specialties)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRL/rl.cfm
+  category: FDA-registered device establishment
+  contract_reference:
+    register: openFDA device/registrationlisting (owner/operator, device listings by medical specialty)
+    standard: FDA establishment registration and device listing (21 CFR 807)
+    spec_file: null
+    role: fda-registered-owner-operator
+    registered_name: Becton Dickinson and Company
+    matched_domain: bd.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    listed_specialties:
+    - Clinical Chemistry
+    - Hematology
+    - Immunology
+    - Microbiology
+    - Pathology
+    - General & Plastic Surgery
+    signal_note: 'REGULATED through the establishment registration: a registration is not a clearance, so no certified_products;
+      specialties are context, never counted'
+    identity: wikidata Q813780 'Becton Dickinson' P856 http://www.bd.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: FDA CLIA test categorizations
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfClia/search.cfm
+  category: CLIA-categorized test system maker
+  contract_reference:
+    register: FDA CLIA test categorization database (clia_detail.zip)
+    standard: FDA CLIA categorization
+    spec_file: null
+    role: clia-categorized-test-system-maker
+    registered_name: Becton Dickinson
+    matched_domain: bd.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: CR230125
+    certified_products:
+    - product: FDA CLIA categorization, high complexity
+      product_type: high
+      lapsed: false
+      latest_effective: 2023/08/23
+      test_systems_sample:
+      - Becton Dickinson and Company, BD BBL Sensi-Disc
+    - product: FDA CLIA categorization, moderate complexity
+      product_type: moderate
+      lapsed: false
+      latest_effective: 2022/05/16
+      test_systems_sample:
+      - Becton Dickinson and Company, BD COR PX/MX System
+      - Becton Dickinson, BD COR PX/GX System
+    - product: FDA CLIA categorization, waived complexity
+      product_type: waived
+      lapsed: false
+      latest_effective: 2004/05/19
+      test_systems_sample:
+      - Becton Dickinson, Paradigm Link Blood Glucose Monitor
+    signal_note: 'certified_products = one entry per CLIA COMPLEXITY held (waived / moderate / high), never per
+      test system; the database lists categorizations, not withdrawals: lapsed false'
+    identity: wikidata Q813780 'Becton Dickinson' P856 http://www.bd.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    other_registrations:
+    - Becton Dickinson and Company
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: EUDAMED (EU IVDR manufacturers)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://ec.europa.eu/tools/eudamed/#/screen/search-eo/e7b3118d-30a4-4264-b0bc-bffe61465ce5
+  category: EU IVDR-registered manufacturer
+  contract_reference:
+    register: EUDAMED public API (UDI-DI data, applicable legislation IVDR; actor public information)
+    standard: EU IVDR (Regulation (EU) 2017/746) manufacturer + UDI registration
+    spec_file: null
+    role: eudamed-ivdr-manufacturer
+    registered_name: Becton, Dickinson and Company
+    matched_domain: bd.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: US-MF-000018910
+    register_country: US
+    actor_status: active
+    domain_from: registered e-mail domain
+    trade_names_sample:
+    - BACTEC
+    - BACTEC MGIT
+    - BBL MGIT
+    - DIFCO
+    - MAX
+    certified_products:
+    - product: EU IVDR device registration, class A
+      product_type: IVDR class A
+      lapsed: false
+      statuses:
+      - on-the-market
+    - product: EU IVDR device registration, class B
+      product_type: IVDR class B
+      lapsed: false
+      statuses:
+      - no-longer-on-the-market
+      - on-the-market
+    - product: EU IVDR device registration, class C
+      product_type: IVDR class C
+      lapsed: false
+      statuses:
+      - on-the-market
+    signal_note: 'certified_products = one entry per IVDR RISK CLASS with registered devices, never per device;
+      lapsed when no device of that class is on the market. Self-filed actor registration: domain + name check +
+      country agreement, hand-reviewed'
+    other_registrations:
+    - Becton Dickinson GmbH
+    - Becton, Dickinson and Company, BD Biosciences
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
 generated: '2026-10-20'
 method: searched
 source:
@@ -59,3 +310,9 @@ source:
 checked:
 - https://connectathon-results.ihe.net/custom-search/
 - https://product-registry.ihe.net/
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://www.advamed.org/advameddx/members/
