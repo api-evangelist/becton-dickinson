@@ -1,4 +1,4 @@
-# Becton Dickinson (becton-dickinson)
+# Becton Dickinson
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,86 +66,107 @@
 
 Becton Dickinson (BD) is a global medical technology company that develops, manufactures, and sells medical devices, instrument systems, and reagents. In October 2025, BD launched the BD Incada Connected Care Platform, an AI-enabled, cloud-based platform built on AWS that unifies data from nearly 3 million connected BD devices including infusion pumps, patient monitors, and pharmacy robotics. BD also produces the Pyxis medication management system and integrates with EMRs via HL7 FHIR standards for clinical data exchange.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/becton-dickinson/refs/heads/main/apis.yml)
+**Areas:** Healthcare · Medical Devices · Infusion Therapy · Medication Management · Connected Health · Diagnostics · Fortune 500
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Becton Dickinson on APIs.io
 
-## Tags:
+Everything profiled for Becton Dickinson is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/becton-dickinson/](https://apis.io/providers/becton-dickinson/)** — or go straight to one of the APIs or properties below.
 
- - Healthcare, Medical Devices, Infusion Therapy, Medication Management, Connected Health, Diagnostics
+### APIs (2)
 
-## Timestamps
+- [BD Incada Connected Care Platform](https://apis.io/apis/becton-dickinson/bd-incada-platform/) — The BD Incada Connected Care Platform is a scalable, AI-enabled, cloud-based platform launched in October 2025 that unifies BD device data from infusion…
+- [BD Pyxis Medication Management System](https://apis.io/apis/becton-dickinson/pyxis/) — BD Pyxis is a medication management and dispensing system used in hospitals to control medication access, reduce errors, and streamline pharmacy workflows.…
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### BD Incada Connected Care Platform
-The BD Incada Connected Care Platform is a scalable, AI-enabled, cloud-based platform launched in October 2025 that unifies BD device data from infusion pumps, patient monitors, and pharmacy robotics into one intelligent ecosystem. Built on AWS, it provides enterprise-wide medication inventory visibility, AI-powered natural language analytics, and integrates with major EMR systems via HL7 FHIR standards.
+#### Security (3)
 
-**Human URL:** [https://www.bd.com/en-us/](https://www.bd.com/en-us/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Becton Dickinson Domain Security](https://apis.io/security/becton-dickinson/becton-dickinson-domain-security/)
+- [Becton Dickinson Trust Center](https://apis.io/security/becton-dickinson/becton-dickinson-trust-center/)
+- [Becton Dickinson Vulnerability Disclosure](https://apis.io/security/becton-dickinson/becton-dickinson-vulnerability-disclosure/)
 
- - Healthcare, Connected Devices, AI, Medication Management, EMR Integration
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://www.bd.com/en-us/)
+- [Becton Dickinson Plans Pricing](https://apis.io/plans/becton-dickinson/becton-dickinson-plans-pricing/)
 
-### BD Pyxis Medication Management System
-BD Pyxis is a medication management and dispensing system used in hospitals to control medication access, reduce errors, and streamline pharmacy workflows. Pyxis connects to hospital information systems and EMRs for medication ordering, dispensing, and reconciliation workflows.
+#### Rate limits (1)
 
-**Human URL:** [https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis](https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis)
+Published request limits.
 
-#### Tags:
+- [Becton Dickinson Rate Limits](https://apis.io/rate-limits/becton-dickinson/becton-dickinson-rate-limits/)
 
- - Healthcare, Medication Management, Pharmacy, Hospital Automation
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Documentation](https://www.bd.com/en-us/products-and-solutions/products/product-families/pyxis)
+- [Becton Dickinson Finops](https://apis.io/finops/becton-dickinson/becton-dickinson-finops/)
 
-## Common Properties
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.bd.com/)
-- [Security](https://www.bd.com/en-us/company/cybersecurity)
-- [PrivacyPolicy](https://www.bd.com/en-us/company/legal-notices-and-privacy/privacy)
-- [TermsOfService](https://www.bd.com/en-us/company/legal-notices-and-privacy)
+- [Support](https://www.bd.com/en-us/support/contact-us)
+- [Blog](https://news.bd.com/press-releases)
+- [Security](https://www.bd.com/en-us/about-bd/cybersecurity)
+- [Terms of service](https://www.bd.com/en-us/about-bd/policies/terms-of-use)
+- [Privacy policy](https://www.bd.com/en-us/about-bd/policies/privacy-policy-statement)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| BD Incada Connected Care Platform | AI-enabled cloud platform launched in 2025 that unifies data from nearly 3 million BD connected medical devices on AWS infrastructure. |
-| AI-Powered Analytics | Natural language search and AI-powered insights for medication inventory, device utilization, and clinical operational analytics. |
-| HL7 FHIR Integration | Healthcare interoperability using HL7 and FHIR standards for EMR integration with Mirth, Cloverleaf, and Rhapsody interface engines. |
-| Medication Management | Pyxis automated dispensing system with connected pharmacy workflow, medication safety, and inventory management. |
-| Device Connectivity | Connectivity for infusion pumps, vital signs monitors, and pharmacy robotics to hospital information systems. |
-| Enterprise Analytics | Customizable dashboards and analytics enabling frontline clinical teams to act on device and medication data insights. |
+**Kin Score 24.8** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 42.1 |
 
-| Name | Description |
-|------|-------------|
-| Medication Safety | Reduce medication errors by connecting BD dispensing systems with EMR medication orders and administration verification. |
-| Clinical Data Interoperability | Enable hospital IT to integrate BD device data into clinical workflows using HL7 FHIR standards. |
-| Pharmacy Analytics | Gain enterprise-wide visibility into medication inventory, dispensing patterns, and waste reduction opportunities. |
-| Connected Care Workflows | Unify data from infusion pumps, patient monitors, and pharmacy systems to support coordinated clinical care decisions. |
+**Agent readiness 0.6** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Epic EMR | Integration with Epic electronic medical records for medication order and administration workflow connectivity. |
-| Cerner EMR | Integration with Cerner/Oracle Health for clinical data exchange and medication management. |
-| Mirth Connect | Open-source HL7 interface engine used with BD systems for healthcare data exchange. |
-| AWS | Amazon Web Services infrastructure powering the BD Incada Connected Care Platform cloud analytics. |
-| Cloverleaf | Healthcare integration engine used with BD systems for interfacing with hospital information systems. |
+**Regulatory alignment 28.1** — Health
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/becton-dickinson/](https://apis.io/providers/becton-dickinson/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Becton Dickinson: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/becton-dickinson/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
