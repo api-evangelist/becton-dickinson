@@ -1,0 +1,100 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Becton Dickinson
+providerId: becton-dickinson
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Healthcare
+  - Medical Devices
+  - Infusion Therapy
+  - Medication Management
+  - Connected Health
+description: BD's connected-care platforms (BD Incada, BD Pyxis) are sold to hospitals and IDNs as part
+  of medical-device and pharmacy-management agreements. APIs (HL7 FHIR for clinical data exchange) are
+  bundled with the platform engagement and not sold standalone or self-serve. There is no public per-call
+  rate card.
+notes: No public API pricing. Connected-care platform engagements are scoped through BD's enterprise
+  sales and clinical implementation teams. Reconcile against the hospital's executed BD agreement once
+  available.
+sources:
+  - https://www.bd.com/en-us/
+plans:
+  - id: becton-dickinson-hospital
+    name: BD Connected Care Hospital Engagement
+    type: enterprise
+    description: Custom-negotiated engagement covering BD Incada Connected Care Platform and / or BD
+      Pyxis. Includes API integration scope, EMR connectivity, AI-analytics features, and clinical implementation
+      services.
+    entries:
+      - label: Platform License
+        description: Annual license / subscription covering platform access and connected-device scope
+        name: platform_license
+        type: subscription
+        metric: year
+        limit: -1
+        timeFrame: year
+        geo: configurable
+        domains: []
+        unit: 1
+        price: contact BD enterprise sales
+        userMultiplied: false
+      - label: Connected Devices
+        description: Per-device or per-bed connectivity scope as defined in the agreement (infusion pumps,
+          monitors, Pyxis stations)
+        name: connected_devices
+        type: quota
+        metric: device
+        limit: -1
+        timeFrame: month
+        geo: configurable
+        domains: []
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+      - label: AI Analytics
+        description: AI-powered analytics modules (natural-language analytics, medication inventory)
+        name: ai_analytics
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: configurable
+        domains: []
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: BD Incada Connected Care Platform
+      - name: BD Pyxis Medication Management System
+      - name: HL7 FHIR EMR Integration
+      - name: AI-Powered Natural Language Analytics
+      - name: AWS-Hosted Cloud Platform
+      - name: Clinical Implementation Services
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - object
+  - period
+  plans:
+  - name: BD Connected Care Hospital Engagement
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - period
+    periods:
+    - month
+    - year
